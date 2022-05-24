@@ -1,9 +1,12 @@
-
 tasks:
-  build-deps:
-    runner: razorci/ruby
+  hello-job:
+    runner: razorci/openjdk:11-buster
     steps:
-    - checkout
+   
+    - checkout    
     - commands:
-      - bundle install || bundle check
-      - bundle exec rspec
+      - |
+         mvn sonar:sonar \
+	       -Dsonar.projectKey=razorop-app \
+	       -Dsonar.host.url=http://43.204.148.218:9000 \
+	       -Dsonar.login=${TOKEN}
