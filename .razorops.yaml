@@ -7,6 +7,6 @@ tasks:
     - commands:
       - |
          mvn sonar:sonar \
-	       -Dsonar.projectKey=razorop-app \
-	       -Dsonar.host.url=http://43.204.148.218:9000 \
-	       -Dsonar.login=${TOKEN}
+         -Dsonar.projectKey=razorop-app\
+         -Dsonar.host.url=http://43.204.148.218:9000\
+         -Dsonar.login=${TOKEN}
