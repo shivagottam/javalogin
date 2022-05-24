@@ -1,0 +1,9 @@
+
+tasks:
+  build-deps:
+    runner: razorci/ruby
+    steps:
+    - checkout
+    - commands:
+      - bundle install || bundle check
+      - bundle exec rspec
